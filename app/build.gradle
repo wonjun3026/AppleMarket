@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.android.applemarket'
+    namespace 'com.android.applemarket2'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.android.applemarket"
+        applicationId "com.android.applemarket2"
         minSdk 31
         targetSdk 33
         versionCode 1
@@ -29,6 +29,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 

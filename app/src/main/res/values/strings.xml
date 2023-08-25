@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AppleMarket</string>
+    <string name="list_price">가격</string>
+    <string name="list_place">장소</string>
+    <string name="list_post">게시글 제목</string>
+    <string name="list_like">30</string>
+    <string name="list_town">삼산동</string>
 </resources>
