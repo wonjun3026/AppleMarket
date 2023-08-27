@@ -20,6 +20,7 @@ class ListActivity : AppCompatActivity() {
 
         val postList = MyList.retrievePostList()
         var list = "aaa"
+        var aa = "aah"
 
         binding.recyclerView.adapter = MyAdapter(postList) // commit 추가
 
