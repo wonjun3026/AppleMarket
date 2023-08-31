@@ -1,4 +1,4 @@
-package com.android.applemarket
+package com.android.applemarket2
 
 import org.junit.Test
 

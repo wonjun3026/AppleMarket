@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_text_lage">15sp</dimen>
+    <dimen name="list_item_text_middle">12sp</dimen>
+    <dimen name="list_item_text_small">8sp</dimen>
+    <dimen name="icon_padding">4dp</dimen>
+    <dimen name="list_item_padding">18dp</dimen>
+    <dimen name="icon_size_detail">250dp</dimen>
+    <dimen name="icon_size_lage">110dp</dimen>
+    <dimen name="icon_size_mini0">80dp</dimen>
+    <dimen name="icon_size_mini">40dp</dimen>
+    <dimen name="icon_size_mini2">30dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+</resources>
