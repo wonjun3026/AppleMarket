@@ -1,7 +1,6 @@
 package com.android.applemarket2
 
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -25,10 +24,6 @@ class ListDetailActivity : AppCompatActivity() {
         val place = findViewById<TextView>(R.id.place)
         val subtitle = findViewById<TextView>(R.id.subtitle)
         val price = findViewById<TextView>(R.id.postPrice)
-        val liked = findViewById<ImageButton>(R.id.likedButton)
-        liked.setOnClickListener{
-            contactList[index].liked += 1
-        }
 
         detailImg.setImageResource(contactList[index].aIcon)
         nickname.text = contactList[index].nickname

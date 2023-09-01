@@ -100,7 +100,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
-                        android:text="매너 온도" />
+                        android:text="@string/detail_tmp"
+                        android:textColor="@color/lightGray"
+                        />
 
                 </LinearLayout>
 
@@ -160,14 +162,14 @@
             android:contentDescription="좋아요 버튼" />
 
         <View
+            android:id="@+id/view"
             android:layout_width="1dp"
             android:layout_height="40dp"
-            android:layout_marginStart="1dp"
+            android:layout_marginStart="10dp"
             android:background="@android:color/darker_gray"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/postPrice"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/likedButton"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -179,9 +181,8 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="100dp"
@@ -194,7 +195,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/red"
+            android:background="@drawable/button_lound"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
