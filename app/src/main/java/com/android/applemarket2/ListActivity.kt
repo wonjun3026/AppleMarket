@@ -31,14 +31,14 @@ class ListActivity : AppCompatActivity() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val postList = MyList.retrievePostList()
+        val postList = MyList.retrievePostList()// 게시글 리스트
 
         val adapter = MyAdapter(postList)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
         adapter.itemClick = object : MyAdapter.ItemClick {
-            override fun onLongClick(view: View, position: Int) {
+            override fun onLongClick(view: View, position: Int) {// 길게 눌렀을 경우 게시글 삭제
                 val index: Int = position
 
                 val builder = AlertDialog.Builder(this@ListActivity)
@@ -54,12 +54,12 @@ class ListActivity : AppCompatActivity() {
                     adapter.updateData()
                 }
 
-                builder.setPositiveButton("Positive", listener)
-                builder.setNegativeButton("Negative", listener)
+                builder.setPositiveButton("삭제", listener)
+                builder.setNegativeButton("취소", listener)
 
                 builder.show()
             }
-            override fun onClick(view: View, position: Int) {
+            override fun onClick(view: View, position: Int) { // 클릭 시 게시글 디테일 페이지로 이동
                 val index: Int = position
                 val detailIntent = Intent(this@ListActivity, ListDetailActivity::class.java)
                 detailIntent.putExtra("index", index)
@@ -98,7 +98,7 @@ class ListActivity : AppCompatActivity() {
         }
     }
 
-    private fun exit() {
+    private fun exit() { // 뒤로 가기 누르면 종료 다이얼 로그 실행
         val builder = AlertDialog.Builder(this)
         builder.setTitle("종료")
         builder.setMessage("종료하시겠습니까?")
@@ -111,8 +111,8 @@ class ListActivity : AppCompatActivity() {
             }
         }
 
-        builder.setPositiveButton("Positive", listener)
-        builder.setNegativeButton("Negative", listener)
+        builder.setPositiveButton("종료", listener)
+        builder.setNegativeButton("취소", listener)
 
         builder.show()
     }
@@ -121,7 +121,7 @@ class ListActivity : AppCompatActivity() {
         exit()
     }
 
-    private fun notification() {
+    private fun notification() { // 종모양을 누르면 알림 발생
         val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
 
         val builder: NotificationCompat.Builder
