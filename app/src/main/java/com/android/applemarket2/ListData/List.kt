@@ -2,7 +2,7 @@ package com.android.applemarket2.ListData
 
 import com.android.applemarket2.R
 
-object MyList {
+object MyList { // 게시글 더미 데이터
     var postList = mutableListOf(
         MyItem(
             "대현동",
